@@ -28,13 +28,13 @@
 import axios from 'axios'
 import { ScalingSquaresSpinner  } from 'epic-spinners'
 export default{
-    mounted(){
+   /* mounted(){
          axios.get("http://localhost/Moviewiki/src/Data.php").then(
              res=>{
                  this.movies=res.data;
              }
          ).catch(err=>console.log(err));
-    },
+    },*/
     data(){
         return{
             title:'NETFLIX WIKI',
@@ -49,7 +49,18 @@ export default{
             listed_in:'N/A',
             cast:'N/A',
             description:'N/A',
-            movies:[]
+            movies:[
+                {
+                    title:'The Stranger',
+                    director:'Orson Welles',
+                    release_year:1946,
+                    duration:'94 min',
+                    listed_in:'Classic Movies, Dramas, Thrillers',
+                    cast:'Edward G. Robinson, Loretta Young, Orson Welles, Philip Merivale, Richard Long, Konstantin Shayne, Byron Keith, Billy House',
+                    description:'After losing everything, an indolent sad sack impulsively joins the U.S. Army and cajoles his best friend into enlisting, too'
+                    
+                }
+            ]
         }
     },
     methods:{
